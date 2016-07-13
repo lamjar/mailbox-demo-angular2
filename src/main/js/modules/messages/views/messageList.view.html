@@ -6,7 +6,7 @@
 <h1>Inbox</h1>
 <!--List of message-->
 <section class="messages" ng-class="{'active-message': activeMessage}">
-    <list-messages messages="messages" (activeMessageChange)="activeMessageChange($event)"></list-messages>
+    <list-messages [messages]="messages" (activeMessageChange)="activeMessageChange($event)"></list-messages>
 </section>
 <!--Detail for individual message-->
 <section *ngIf="activeMessage">
