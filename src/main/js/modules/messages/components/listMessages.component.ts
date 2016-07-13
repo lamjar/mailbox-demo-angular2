@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import { Message } from '../models/message.model';
 
 @Component({
@@ -27,12 +27,19 @@ export class ListMessagesComponent {
 
   ];
 
-  active = this.messages[0];
+  @Output() activeMessageChange = new EventEmitter();
+
+
+  activeMesage = this.messages[0];
 
   setActive(message: Message) {
     console.log('active message is', message);
-    this.active = message;
+    this.activeMesage = message;
+    //fire event
+    this.activeMessageChange.emit(this.activeMesage);
   };
+
+  // TODO: set first message to activeMessage and emit event accordingly...
 
 
 }
