@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import './inboxView.component.scss';
+// import './inboxView.component.scss';
 
 @Component({
-  templateUrl: './sentView.component.html'
+  templateUrl: '../views/messageList.view.html'
 })
 export class SentViewComponent { }

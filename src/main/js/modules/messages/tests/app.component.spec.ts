@@ -1,3 +1,5 @@
+// TODO: adjust for real testing... to individual components in ../components
+/*
 import {
   it,
   inject,
@@ -15,3 +17,4 @@ describe('App', () => {
     expect(2).toBe(2);
   }));
 });
+*/
