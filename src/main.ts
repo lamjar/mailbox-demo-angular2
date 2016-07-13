@@ -6,10 +6,15 @@ import { enableProdMode } from '@angular/core';
 //our own stuff aka components
 import { AppComponent } from './app/app.component';
 
+//routes
+import { appRouterProviders } from './app/app.routes';
+
 //enable productionMode for Angular2 depending on ENV
 if (process.env.ENV === 'production') {
   enableProdMode();
 }
 
 //bootstrap the app with AppComponent as "mainComponent"
-bootstrap(AppComponent, []);
+bootstrap(AppComponent, [
+  appRouterProviders
+]).catch(err => console.error(err));
