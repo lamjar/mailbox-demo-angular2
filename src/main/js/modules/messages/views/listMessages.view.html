@@ -6,6 +6,7 @@
     <li ng-repeat="message in messages | filter:searchText"
         ng-class="{active:activeMessage.id === message.id}"
         ng-click="setActive(message)">
+    <li *ngFor="let message of messages" (click)="setActive(message)">
         <span class="from">{{message.from}}</span>
         <span class="to">{{message.to}}</span>
         <!--<span class="date">{{message.time | date: 'dd.MM.yy hh:mm'}}</span>-->
