@@ -15,21 +15,15 @@ export class ListMessagesComponent {
 
   @Output() activeMessageChange = new EventEmitter();
 
-
-  // activeMesage = this.messages[0];
-
+  // TODO: set first message to activeMessage and emit event accordingly...
   activeMessage : Message;
 
   searchTerm : string;
 
   setActive(message: Message) {
-    console.log('active message is', message);
     this.activeMessage = message;
     //fire event
     this.activeMessageChange.emit(this.activeMessage);
   };
-
-  // TODO: set first message to activeMessage and emit event accordingly...
-
 
 }

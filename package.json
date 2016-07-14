@@ -63,7 +63,7 @@
     "lintAll": "jshint src/main/js",
     "package": "npm run clean && npm run copy && npm run build",
     "packageDebug": "npm run clean && npm run copy && npm run buildDebug",
-    "serve": "webpack-dev-server --content-base src/main/ --hot --inline -v",
+    "serve": "npm start",
     "serve:dist": "npm run package && http-server dist/",
     "start": "webpack-dev-server --inline --progress --port 4001",
     "test": "karma start",

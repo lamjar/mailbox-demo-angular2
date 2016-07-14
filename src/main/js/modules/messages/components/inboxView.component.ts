@@ -33,13 +33,13 @@ export class InboxViewComponent implements OnInit {
   }
 
   getMessages(limit = 100) {
-    this.messageService.getInboxMessages(limit).then(messages => this.messages = messages)
+    this.messageService.getInboxMessages(limit)
+      .then(messages => this.messages = messages)
   }
 
   ngOnInit() {
     this.getMessages();
   }
 
-
-
 }
+
