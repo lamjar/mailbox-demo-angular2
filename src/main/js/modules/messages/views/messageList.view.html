@@ -1,0 +1,12 @@
+<!--toolbar-->
+<div class="toolbar">
+    <button type="button" (click)="fetch(200)">Fetch 200</button>
+</div>
+<!--List of message-->
+<section class="messages" [ngClass]="{'active-message': activeMessage}">
+    <list-messages [messages]="messages" (activeMessageChange)="activeMessageChange($event)"></list-messages>
+</section>
+<!--Detail for individual message-->
+<section *ngIf="activeMessage">
+    <show-message [message]="activeMessage"></show-message>
+</section>
