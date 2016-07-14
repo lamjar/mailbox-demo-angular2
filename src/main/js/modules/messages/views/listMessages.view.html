@@ -1,9 +1,9 @@
 <!--filter-->
 <div class="filter">
-    <input type="text" ng-model="searchText" placeholder="Search">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search">
 </div>
 <ul *ngIf="messages">
-    <li *ngFor="let message of messages" (click)="setActive(message)">
+    <li *ngFor="let message of messages | filterByName : searchTerm" (click)="setActive(message)">
         <span class="from">{{message.from}}</span>
         <span class="to">{{message.to}}</span>
         <!--<span class="date">{{message.time | date: 'dd.MM.yy hh:mm'}}</span>-->

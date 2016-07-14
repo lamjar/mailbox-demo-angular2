@@ -1,9 +1,12 @@
 import {Component, Output, EventEmitter, Input} from '@angular/core';
 import { Message } from '../models/message.model';
 
+import { FilterByNamePipe } from '../pipes/filterByName.pipe'
+
 @Component({
   templateUrl: '../views/listMessages.view.html',
-  selector: 'list-messages'
+  selector: 'list-messages',
+  pipes: [FilterByNamePipe]
 })
 export class ListMessagesComponent {
 
@@ -16,6 +19,8 @@ export class ListMessagesComponent {
   // activeMesage = this.messages[0];
 
   activeMessage : Message;
+
+  searchTerm : string;
 
   setActive(message: Message) {
     console.log('active message is', message);
