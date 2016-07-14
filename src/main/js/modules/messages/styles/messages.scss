@@ -15,21 +15,21 @@
 }
 
 .mailboxes,
-.mailboxes ~ [ui-view],
-.mailboxes ~ [ui-view] section {
+.mailboxes ~ router-outlet + *,
+.mailboxes ~ router-outlet + * section {
   box-sizing: border-box;
   height: 100%;
   overflow: hidden;
 }
 
 .mailboxes,
-.mailboxes ~ [ui-view] section {
+.mailboxes ~ router-outlet + * section {
   float: left;
   overflow: hidden;
 }
 
 .mailboxes,
-.mailboxes ~ [ui-view] section + section,
+.mailboxes ~ router-outlet + * section + section,
 .filter + ul {
   overflow: hidden;
   overflow-y: scroll;
@@ -37,18 +37,18 @@
 }
 
 .mailboxes,
-.mailboxes ~ [ui-view] section.active-message {
+.mailboxes ~ router-outlet + * section.active-message {
   border-right: 1px solid #bfbfbf;
 }
 
-.mailboxes ~ [ui-view] section li,
-.mailboxes ~ [ui-view] section + section,
+.mailboxes ~ router-outlet + * section li,
+.mailboxes ~ router-outlet + * section + section,
 .toolbar,
 .filter {
   padding: 8px;
 }
 
-.mailboxes ~ [ui-view] section {
+.mailboxes ~ router-outlet + * section {
   width: 100%;
   height: calc(100% - 41px);
 
@@ -97,7 +97,7 @@
   }
 }
 
-.mailboxes ~ [ui-view] {
+.mailboxes ~ router-outlet + * {
   position: relative;
   display: block;
   height: 100%;

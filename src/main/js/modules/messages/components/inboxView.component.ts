@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import '../styles/messages.scss';
+import '../styles/messages.scss';
 
 import { Message } from '../models/message.model';
 
