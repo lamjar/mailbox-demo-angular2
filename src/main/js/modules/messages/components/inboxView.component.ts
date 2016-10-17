@@ -11,7 +11,6 @@ import { MessageService } from '../../../mocks/messages.mock.service';
 
 @Component({
   templateUrl: '../views/messageList.view.html',
-  directives: [ListMessagesComponent, ShowMessageComponent],
   providers: [MessageService]
 })
 export class InboxViewComponent implements OnInit {

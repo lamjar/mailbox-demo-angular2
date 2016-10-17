@@ -1,12 +1,9 @@
 import {Component, Output, EventEmitter, Input} from '@angular/core';
 import { Message } from '../models/message.model';
 
-import { FilterByNamePipe } from '../pipes/filterByName.pipe'
-
 @Component({
   templateUrl: '../views/listMessages.view.html',
   selector: 'list-messages',
-  pipes: [FilterByNamePipe]
 })
 export class ListMessagesComponent {
 
